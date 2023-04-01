@@ -40,15 +40,18 @@ class literals
 
         char ch = 'a';
         System.out.println((int)ch);
-        char chA = 65;
+        char chA = 65; //decimal form 
         System.out.println(chA);
         System.out.println((int)chA);
 
-        ch = 0x41;
+        ch = 0x41; //octal form
         System.out.println(ch);
         
         String str = "hello alexa";
         System.out.println(str);
+
+        ch = '\u0061'; //unicode "\u####"  
+        System.out.println(ch);
        
     }
 }
