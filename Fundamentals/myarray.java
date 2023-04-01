@@ -1,6 +1,6 @@
 class myarray{
     public static void main(String args[]){
-        int[] a = new int[7];
+        int[] a = new int[7]; // arr construction 
         for(int i  = 0; i < 7; i++)
         System.out.println(a[i]);
         
@@ -12,6 +12,8 @@ class myarray{
         }
 
      //2D array creation not a matric like c/c++ it is a arr of arrays
+     //type[] arr_name = new type[size]; 
+     //the max allow array size in java is max of int = 2147483647
         int[] arr2dnormal1 = new int[0];
         int  [][]arr2dnoral2 = new int[3][3];
         int[] arr2dnoral3[] = new int[3][3];
@@ -35,7 +37,7 @@ class myarray{
         for(int j = 0; j < 3; j++){
             if(arr[i][j] > maxval)
                 maxval = arr[i][j];
-          
+          /
         }
       }
     System.out.print("max : "+maxval);
