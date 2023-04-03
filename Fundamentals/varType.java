@@ -30,6 +30,9 @@ class varType{
         int y = 34;
         System.out.println(y); 
 
+        // static int p = 34;
+        // System.out.println(p); 
+
     }
     
 }
