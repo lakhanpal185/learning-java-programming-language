@@ -15,5 +15,15 @@ class varArgmethods{
             total += y;
         }
         System.out.println("var - arg method, sum: "+total);
-    }
+     }
+     // they get least priority than means if there exist a function 
+    //  m1(int... x);
+    //  m1(int ...x);
+    //  m1(int y ,int ...x)
+    //  m1(int ...y ,int x) // not valid
+    //  m1(int ...y ,int ...x) // not valid only one var-arg parameter is allowed or we can say it does make sence
+    
+    
+    // m1(int [] a)
+    // m1(int ...x) we can not do this  in same class
 }
