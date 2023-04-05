@@ -1,0 +1,48 @@
+coding standards for class
+-class name should be like (they are usually nouns)
+    Student  // see S is uppercase letter
+    StringBuffer // see S and B is uppercase letter
+
+coding standards for interfaces
+-interface names are adjectives 
+    Runnable,Serializable and etc. (same like class)
+
+coding standards for methods
+-they are usually verbs or verb noun combination
+    start with lower letter
+    IF multimaple words then innerwords are uppercase letter(camelcase)
+    run()
+    sleep()
+    eat()
+    getName() and etc.
+
+coding standards for veriables
+-normaly - nouns
+    start with lower letter
+    IF multimaple words then innerwords are uppercase letter(camelcase)
+    mobileNumber
+    rollNumber
+    isEmpty and etc.
+
+coding standards for constants
+- usually nouns
+    should contains only uppercase characters
+    If multimaple words then seperate with '_' symbol
+    MAX_INT
+    MIN_VALUE
+    PI and etc.
+
+coding standards for Listeners
+-to register a Listener
+    method name should be prefix with 'add'
+    after add whatever we are taking the arrgument should be same 
+    like 
+    public void addMyActionListener(addMyActionListener l)
+
+-to unresister a Listener
+    prefix name with 'remove'
+    like
+    public void removeMyActionListener(MyActionListener l)
+
+
+use getname or setname like methods
