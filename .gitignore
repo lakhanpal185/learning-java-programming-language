@@ -8,3 +8,12 @@ varType.class
 varArgmethods.class
 mainMethod.class
 cmdClass.class
+
+IncDrcArithematic.class
+Concatinations.class
+RelationalOperators.class
+BitWise.class
+TypeCasting.class
+EvalutionOrderDemo.class
+IfAndCase.class
+IterativeStatements.class
