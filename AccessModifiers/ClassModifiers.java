@@ -17,7 +17,7 @@
 
 //1. public class:  can access that class from any where
 // package pack1;
-// public class ClassModifiersA{
+// public class ClassModifiers{
 //     public void m1(){
 //         System.out.println("hello dear");
 //     }
