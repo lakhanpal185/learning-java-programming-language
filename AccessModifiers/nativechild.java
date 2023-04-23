@@ -15,5 +15,3 @@ class nativechild{
 //1.it improve performance of the system 
 //2. it enable to use already available legacy non java -codes
 //it completely diff from the abstract becoz we are not allowed to override this
-
-

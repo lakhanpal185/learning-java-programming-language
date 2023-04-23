@@ -25,3 +25,6 @@ ClassModifiers.class
 bike.class
 bus.class
 car.class
+accessget.class
+finalVariable.java
+classStatic.class
