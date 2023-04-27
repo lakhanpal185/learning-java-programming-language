@@ -1,6 +1,8 @@
 // interface : any service requirement spacification or any contruct between clinet and servies
 //             provider or 100 % pure abstract class is called interface
-// advantage: security, easy enhancement(no change in outside view), differnet system can communicate
+// advantage: security because it hide implementations details, easy enhancement(no change in outside view), 
+// differnet system can communicate via interface
+
 interface interf{
     void ma1(); // by default public abstract void ma1()
     void ma2();
