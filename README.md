@@ -40,3 +40,21 @@ java programming language codes that I have learn
 2. class modifiers
 3. member modifiers
 4. interfaces
+
+##OOPs concepts
+1. Data hiding
+2. Abstraction
+3. Encapsulation
+4. Tightly Encapsulation
+5. Is- a relationship
+6. has- a relationship
+7. method signature
+8. over loading 
+9. over riding
+10. method hiding
+11. static control flow 
+12. instance control flow
+13. constructors 
+14. coupling 
+15. cohesion
+16. type_casting

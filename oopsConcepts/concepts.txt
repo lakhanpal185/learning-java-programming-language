@@ -32,3 +32,15 @@ class xyz extends abs{
         System.out.println("code :my code defines my language of love with computer");
     }
 }
+
+3. Encapsulation : Encapsulation data with method is called Encapsulation
+ Encapsulation = DataHiding + Abstraction;
+ class abs{
+    private int accNo;
+    public void setAccNo(int acc){
+        accNo = acc;
+    }
+    public int getaccNo(){
+        return accNo;
+    }
+ } 
