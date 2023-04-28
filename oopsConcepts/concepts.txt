@@ -1,0 +1,34 @@
+1. Data hiding
+2. Abstraction
+3. Encapsulation
+4. Tightly Encapsulation
+5. Is- a relationship
+6. has- a relationship
+7. method signature
+8. over loading 
+9. over riding
+10. method hiding
+11. static control flow 
+12. instance control flow
+13. constructors 
+14. coupling 
+15. cohesion
+16. type_casting
+
+//basics
+1. Data hiding: hiding of data is performed by private modifier
+outside person can not access our data
+class Account{
+    private long accountNo = 1993434; 
+}
+
+2. Abstraction : hiding the implementation details and  highlite teh set 
+of services
+abstract class abs{
+    public abstract void functionSay();
+}
+class xyz extends abs{
+    public abstract void functionSay{
+        System.out.println("code :my code defines my language of love with computer");
+    }
+}
