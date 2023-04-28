@@ -44,3 +44,45 @@ class xyz extends abs{
         return accNo;
     }
  } 
+
+4. Tightly Encapsulation class: all data members are priavate 
+
+5. Has- a relationship: this is also know as inheritance by using extends keyword
+it increate code reuseability
+class Abs{
+    public void functionSay(){
+        System.out.println("inheritance is all about hiding data and making code reusable");
+    }
+}
+class AbsMaster{
+    public void m2(){}
+    public static void main(){
+        //1st case
+        AbsMaster am = new AbsMaster();
+        am.functionSay();
+        am.m2();
+
+        //2nd case
+        Abs a = new abs();
+        a.functionSay();
+        //a.m2(); m2 is chiled function which is unkown to Abs //not valid        
+
+        //3rd case
+        Abs works = new AbsMaster();
+        Abs.functionSay();
+        //abs.m2 invalid 
+
+        //4rd case
+        AbsMaster abm = new Abs // invalid
+    }
+}
+
+object class is available to all java class, if a java class don't not inherite 
+any class then this is the child of object class like
+class A extends B{
+
+}
+
+then A is child of B
+B is child of object
+
