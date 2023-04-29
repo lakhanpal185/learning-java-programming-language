@@ -86,3 +86,13 @@ class A extends B{
 then A is child of B
 B is child of object
 
+method signature:  a method signature consists of the method name and the parameter list.
+The parameter list includes the data types and names of the parameters, and the order in which they appear.
+The basic syntax for a method signature in Java is:
+returnType methodName(parameterType1 parameterName1, parameterType2 parameterName2, ...);
+
+
+polymorephism:Polymorphism is a fundamental concept in object-oriented programming that allows objects of different classes
+to be treated as if they are objects of the same class. 
+In Java, polymorphism is achieved through two mechanisms:
+ method overloading and method overriding
