@@ -102,3 +102,117 @@ In Java, polymorphism is achieved through two mechanisms:
 but different parameter lists. Java uses the number, type, and order of the parameters to distinguish between the different
 versions of the method.
 
+2.method overriding: method overriding is a mechanism that allows a subclass to provide its own implementation of a
+method that is already provided by its parent class. When a method in a subclass has the same name, return type,
+and parameter list as a method in its parent class, it is said to override the parent class's method.
+
+The method in the subclass must have the same name, return type, and parameter list as the method in the parent class.
+java
+Copy code
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+The access modifier of the method in the subclass cannot be more restrictive than the access modifier of the method in the parent class.
+java
+Copy code
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+public class Cat extends Animal {
+    // This will cause a compile-time error, because the
+    // access modifier is more restrictive than the parent class's
+    // method.
+    // @Override
+    // private void makeSound() {
+    //     System.out.println("Meow!");
+    // }
+    
+    @Override
+    public void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+The return type of the method in the subclass can be a subclass of the return type of the method in the parent class.
+java
+Copy code
+public class Animal {
+    public Animal reproduce() {
+        return new Animal();
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public Cat reproduce() {
+        return new Cat();
+    }
+}
+The method in the subclass cannot throw more checked exceptions than the method in the parent class. However, it can throw fewer or no exceptions, or throw unchecked exceptions.
+java
+Copy code
+import java.io.IOException;
+
+public class Animal {
+    public void makeSound() throws IOException {
+        // do something
+    }
+}
+
+public class Cat extends Animal {
+    // This will cause a compile-time error, because
+    // FileNotFoundException is a more restrictive checked
+    // exception than IOException.
+    // @Override
+    // public void makeSound() throws FileNotFoundException {
+    //     // do something
+    // }
+    
+    // This is allowed, because IOException is the same
+    // or less restrictive than the parent class's method.
+    @Override
+    public void makeSound() throws IOException {
+        // do something
+    }
+    
+    // This is allowed, because NullPointerException is
+    // an unchecked exception.
+    @Override
+    public void makeSound() throws NullPointerException {
+        // do something
+    }
+    
+    // This is also allowed, because the subclass can choose
+    // not to throw any exceptions at all.
+    @Override
+    public void makeSound() {
+        // do something
+    }
+}
+If you override a method and want to call the parent class's version of the method from within the subclass, you can use the super keyword to refer to the parent class.
+java
+Copy code
+public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+public class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        super.makeSound(); // calls the parent class's version of the method
+        System.out.println("Meow!");
+    }
+}
