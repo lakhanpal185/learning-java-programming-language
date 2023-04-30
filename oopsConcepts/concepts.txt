@@ -95,4 +95,10 @@ returnType methodName(parameterType1 parameterName1, parameterType2 parameterNam
 polymorephism:Polymorphism is a fundamental concept in object-oriented programming that allows objects of different classes
 to be treated as if they are objects of the same class. 
 In Java, polymorphism is achieved through two mechanisms:
- method overloading and method overriding
+1. method overloading 
+2. method overriding
+
+1. method overloading: Method overloading is a technique in which two or more methods in the same class have the same name 
+but different parameter lists. Java uses the number, type, and order of the parameters to distinguish between the different
+versions of the method.
+
