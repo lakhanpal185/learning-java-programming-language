@@ -216,3 +216,9 @@ public class Cat extends Animal {
         System.out.println("Meow!");
     }
 }
+
+
+Method hiding: Method hiding is a concept in Java where a subclass defines a static method with
+the same name and signature as a static method in its superclass. When the method is called on 
+an object of the subclass, the subclass's method is called instead of the parent class's method.
+
