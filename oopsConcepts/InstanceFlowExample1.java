@@ -1,9 +1,9 @@
-public class Car {
+class Car {
     
     String make;
     String model;
-    int year;
-    
+    static int year = 2020;// if we not use static we get unknown and unknown becoz constructor called after the instance block
+
     {
         switch(year) {
             case 2020:
@@ -22,6 +22,7 @@ public class Car {
                 make = "Unknown";
                 model = "Unknown";
         }
+        ++year;
     }
     
     public Car(int year) {
@@ -57,3 +58,13 @@ public class Car {
         System.out.println("Car 3 year: " + car3.getYear());
     }
 }
+// o/p is:
+// Car 1 make: Toyota
+// Car 1 model: Camry
+// Car 1 year: 2021
+// Car 2 make: Honda
+// Car 2 model: Civic
+// Car 2 year: 2022
+// Car 3 make: Ford
+// Car 3 model: Fusion
+// Car 3 year: 2023

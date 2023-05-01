@@ -242,3 +242,8 @@ in the order they appear in the class.
 d. Finally, if there are any static methods in the class, they can be executed.
 
 example in StaticFlowExample file
+
+12. Instance control flow: Instance control flow refers to the sequence in which instance variables and instance blocks are initialized
+or executed in a Java program. The instance control flow is executed every time an object of the class is created.
+
+example in file InstanceFlowExample.java 
