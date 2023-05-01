@@ -14,10 +14,9 @@ public class MethodHiding{
         Animal an = new Animal();
         Cat ct = new Cat();
 
-        an.makeSound();
-        ct.makeSound();
-        // make any random sound
-        // meow
+        an.makeSound();// make any random sound
+        ct.makeSound();// meow
+        
         
         Animal an2 = new Cat();
         an2.makeSound();// make any random sound

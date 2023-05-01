@@ -47,7 +47,7 @@ class xyz extends abs{
 
 4. Tightly Encapsulation class: all data members are priavate 
 
-5. Has- a relationship: this is also know as inheritance by using extends keyword
+5. Is-a relationship: this is also know as inheritance by using extends keyword
 it increate code reuseability
 class Abs{
     public void functionSay(){
@@ -86,13 +86,19 @@ class A extends B{
 then A is child of B
 B is child of object
 
-method signature:  a method signature consists of the method name and the parameter list.
+6. Has-a relationship: has a relationship is also known as 'composition and aggerigataion'
+there is no spacified keyword for this but we often uses new keyword
+class Car{
+    Engine engine = new Engine(); 
+}
+
+7. method signature:  a method signature consists of the method name and the parameter list.
 The parameter list includes the data types and names of the parameters, and the order in which they appear.
 The basic syntax for a method signature in Java is:
 returnType methodName(parameterType1 parameterName1, parameterType2 parameterName2, ...);
 
 
-polymorephism:Polymorphism is a fundamental concept in object-oriented programming that allows objects of different classes
+8,9,10. polymorephism:Polymorphism is a fundamental concept in object-oriented programming that allows objects of different classes
 to be treated as if they are objects of the same class. 
 In Java, polymorphism is achieved through two mechanisms:
 1. method overloading 
@@ -222,3 +228,17 @@ Method hiding: Method hiding is a concept in Java where a subclass defines a sta
 the same name and signature as a static method in its superclass. When the method is called on 
 an object of the subclass, the subclass's method is called instead of the parent class's method.
 
+
+11. Static control flow: Static control flow refers to the sequence in which static blocks, static variables,
+and static methods are initialized or executed in a Java program. 
+*The static control flow is executed when the class is loaded into memory and it is performed only once per class loading.
+
+The static control flow in Java follows a specific sequence:
+a. When a class is loaded into memory, all the static variables declared in the class are initialized with their default
+values (e.g., zero for int, false for boolean).
+b. If the class has any static blocks, they are executed in the order they appear in the class.
+c. Next, the static variables are initialized with their explicit values or with the values assigned in static blocks,
+in the order they appear in the class.
+d. Finally, if there are any static methods in the class, they can be executed.
+
+example in StaticFlowExample file

@@ -36,6 +36,7 @@ class main{
 
         //because automatic promotion in overloading,basicly what compiler does it tries to converting arguments by 
         //upcasting find for the match function  
+        // Overloading methods may have different access modifiers (e.g., public, private, protected), but they must be in the same class.
     }
 
 }
