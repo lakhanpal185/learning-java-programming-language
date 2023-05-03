@@ -47,14 +47,14 @@ java programming language codes that I have learn
 3. Encapsulation
 4. Tightly Encapsulation
 5. Is- a relationship
-6. has- a relationship
-7. method signature
-8. over loading 
-9. over riding
-10. method hiding
-11. static control flow 
-12. instance control flow
-13. constructors 
-14. coupling 
-15. cohesion
-16. type_casting
+6. Has- a relationship
+7. Method signature
+8. Over loading 
+9. Over riding
+10. Method hiding
+11. Static control flow 
+12. Instance control flow
+13. Constructors 
+14. Coupling 
+15. Cohesion
+16. Type_casting
