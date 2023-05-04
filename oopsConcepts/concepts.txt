@@ -12,8 +12,7 @@
 12. instance control flow
 13. constructors 
 14. coupling 
-15. cohesion
-16. type_casting
+15. type_casting
 
 //basics
 1. Data hiding: hiding of data is performed by private modifier
@@ -306,7 +305,85 @@ super and this keywords(instance members): This can be use anywhere except in st
 super is used to refer to the parent class of a subclass.
 this is used to refer to the current instance of a class.
 
-16. type casting:Type casting in Java is the process of converting a value of one data type to another. 
+
+14. Coupling: Coupling in Java refers to the degree of dependency between two classes. It measures 
+how closely two classes are related to each other. There are different types of coupling, ranging from low to high, 
+and each has a different impact on the maintainability, extensibility, and reusability of the code.
+
+a. Loose Coupling: Loose coupling is a design principle that promotes independence between classes. 
+In this system one class have minimal knowledge of the other classes.
+This is achieved by using interfaces or abstract classes to define common behavior between classes,
+which allows for easy substitution of one class for another.
+
+interface Animal {
+  void makeSound();
+}
+
+class Cat implements Animal {
+  void makeSound() {
+    System.out.println("Meow");
+  }
+}
+
+class Dog implements Animal {
+  void makeSound() {
+    System.out.println("Woof");
+  }
+}
+
+Animal animalObj = new Cat();
+animalObj.makeSound(); // "Meow"
+
+b. Tight Coupling: Tight coupling occurs when two classes are highly dependent on each other. In a tightly coupled system,
+changes in one class can have a direct impact on the other class, making the system difficult to maintain and extend.
+This can lead to a lot of redundant code and make it hard to reuse code in other parts of the system.
+
+class Payment {
+  void processPayment() {
+    // code to process payment
+  }
+}
+
+class ShoppingCart {
+  private Payment payment;
+
+  ShoppingCart() {
+    payment = new Payment(); // tight coupling
+  }
+
+  void checkout() {
+    payment.processPayment(); // tightly coupled to the Payment class
+  }
+}
+Cohesion
+Cohesion refers to the degree to which the elements of a class are related to each other. A highly cohesive class has elements that are closely related to each other and work together to achieve a common goal. This makes the class easier to understand, maintain, and extend.
+
+class Order {
+  private Customer customer;
+  private List<Item> items;
+  private double total;
+
+  Order(Customer customer, List<Item> items) {
+    this.customer = customer;
+    this.items = items;
+    calculateTotal();
+  }
+
+  private void calculateTotal() {
+    // code to calculate the total cost of the order
+  }
+
+  // getters and setters
+}
+In the above example, the elements of the Order class (customer, items, and total) are closely related to each other 
+and work together to represent an order. This makes the class highly cohesive.
+
+In summary, designing classes with loose coupling and high cohesion can improve the maintainability, extensibility, 
+and reusability of the code. It's important to keep these principles in mind when designing software systems.
+
+
+
+15. type casting:Type casting in Java is the process of converting a value of one data type to another. 
 Java supports two types of type casting: implicit and explicit.
 
 Implicit type casting, also known as widening conversion, happens when the value of a smaller data 
@@ -366,3 +443,5 @@ Cat catObj = (Cat) animalObj; // downcasting from Animal to Cat
 NOTE : It's important to note that object type casting is not always possible. For example, you cannot cast an object of
 one class to an object of another class if they are not related by inheritance or if one class does not implement an interface
 that the other class extends or implements.
+
+16
