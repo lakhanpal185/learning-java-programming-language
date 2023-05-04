@@ -324,3 +324,45 @@ int myInt = (int) myDouble; // explicit type casting
 Note that when using explicit type casting, there is a risk of data loss or overflow if the value of the original data type
 is outside the range of the target data type. It is important to use explicit type casting carefully and to ensure that the 
 resulting value is valid for the target data type.
+
+According to data type: There are two types of casting in Java: primitive type casting and object type casting.
+
+a. Primitive Type Casting: Primitive type casting involves converting one primitive data type to another.
+In general, there are two types of primitive type casting: widening conversion and narrowing conversion.
+Widening Conversion: Widening conversion occurs when a value of a smaller data type is converted to a larger data type.
+For example, when you convert an int to a double, you are widening the conversion.
+int num1 = 10;
+double num2 = num1; // widening conversion from int to double
+
+b. Narrowing Conversion: Narrowing conversion occurs when a value of a larger data type is converted to a smaller data type.
+double num1 = 10.5;
+int num2 = (int) num1; // narrowing conversion from double to int
+
+2. Object Type Casting: Object type casting involves converting one object type to another. In Java, there are two types 
+of object type casting: upcasting and downcasting.
+
+a. Upcasting: Upcasting occurs when a subclass object is converted to a superclass object. 
+This is done automatically by Java and does not require an explicit cast.
+class Animal {
+  void makeSound() {
+    System.out.println("Animal is making a sound");
+  }
+}
+
+class Cat extends Animal {
+  void makeSound() {
+    System.out.println("Meow");
+  }
+}
+
+Animal catObj = new Cat(); // upcasting from Cat to Animal
+
+b. Downcasting: Downcasting occurs when a superclass object is converted to a subclass object. This type of casting requires 
+an explicit cast and can result in a ClassCastException if the object being cast is not actually an instance of the subclass.
+
+Animal animalObj = new Cat();
+Cat catObj = (Cat) animalObj; // downcasting from Animal to Cat
+
+NOTE : It's important to note that object type casting is not always possible. For example, you cannot cast an object of
+one class to an object of another class if they are not related by inheritance or if one class does not implement an interface
+that the other class extends or implements.
